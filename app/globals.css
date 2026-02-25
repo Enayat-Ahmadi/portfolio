@@ -126,12 +126,12 @@
 }
 @keyframes meteor {
   0% {
-    transform: rotate(var(--meteor-angle, 215deg)) translateX(0);
+    transform: rotate(215deg) translateX(0);
     opacity: 0;
   }
   8% { opacity: 1; }
   100% {
-    transform: rotate(var(--meteor-angle, 215deg))
+    transform: rotate(215deg)
       translateX(calc(-1 * var(--meteor-travel, 700px)));
     opacity: 0;
   }
