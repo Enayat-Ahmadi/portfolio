@@ -1,14 +1,24 @@
-import About from "./about/page";
 import ThemeToggle from "@/Components/ThemeToggle";
 import StarsBackground from "@/Components/StarBackground";
 import Navbar from "@/Components/Navbar";
-
+import HeroSection from "@/Components/HeroSection";
+import AboutSection from "@/Components/AboutSection";
+import SkillsSection from "@/Components/SkillsSection";
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden ">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden flex justify-center">
+      {/* Theme Toggle */}
       <ThemeToggle />
+      {/* Background Effects */}
       <StarsBackground />
-      <Navbar/>
+      {/* Navagation */}
+      <Navbar />
+      {/* Main Section */}
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+      </main>
     </div>
   );
 }
