@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 @theme {
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -7,6 +8,8 @@
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
   --color-card: hsl(var(--card));
+
+  /* animation tokens (just variables) */
   --animation-float: float 6s ease-in-out infinite;
   --animation-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
   --animation-fade-in: fade-in 0.7s ease-out forwards;
@@ -15,36 +18,57 @@
   --animation-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
   --animation-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
   --animation-meteor: meteor 5s linear infinite;
+}
 
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
+/* -----------------------------
+   Keyframes (must be global)
+   ----------------------------- */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
   }
-  @keyframes pulse-subtle {
-    0%,
-    100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.8;
-    }
-  }
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  50% {
+    transform: translateY(-10px);
   }
 }
+
+@keyframes pulse-subtle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes meteor {
+  0% {
+    transform: rotate(215deg) translateX(0);
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(215deg)
+      translateX(calc(-1 * var(--meteor-travel, 700px)));
+    opacity: 0;
+  }
+}
+
 
 @layer base {
   :root {
@@ -58,6 +82,7 @@
 
     --border: 214 32% 91%;
   }
+
   .dark {
     --background: 222 47% 4%;
     --foreground: 213 31% 91%;
@@ -69,19 +94,54 @@
 
     --border: 217 33% 20%;
   }
+
   * {
     @apply border-border;
   }
+
   html {
     @apply scroll-smooth;
   }
+
   body {
     @apply bg-background text-foreground transition-colors duration-300;
-    font-feature-settings:
-      "rlig" 1,
-      "calt" 1;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
+
+
+@utility animate-float {
+  animation: var(--animation-float);
+}
+
+@utility animate-pulse-subtle {
+  animation: var(--animation-pulse-subtle);
+}
+
+@utility animate-fade-in {
+  animation: var(--animation-fade-in);
+}
+
+@utility animate-fade-in-delay-1 {
+  animation: var(--animation-fade-in-delay-1);
+}
+
+@utility animate-fade-in-delay-2 {
+  animation: var(--animation-fade-in-delay-2);
+}
+
+@utility animate-fade-in-delay-3 {
+  animation: var(--animation-fade-in-delay-3);
+}
+
+@utility animate-fade-in-delay-4 {
+  animation: var(--animation-fade-in-delay-4);
+}
+
+@utility animate-meteor {
+  animation: var(--animation-meteor);
+}
+
 
 @utility container {
   margin-inline: auto;
@@ -103,54 +163,54 @@
     max-width: 1400px;
   }
 }
+
 @utility text-glow {
   @apply relative;
   text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
 }
+
 @utility card-hover {
   @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
   text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
 }
+
 @utility gradient-border {
   @apply relative rounded-md;
   background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
   background-clip: padding-box;
   border: 1px solid transparent;
 }
+
 @utility cosmic-button {
   @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)] hover:scale-105 active:scale-95;
 }
+
 @utility star {
   @apply absolute rounded-full bg-white;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
 }
-@keyframes meteor {
-  0% {
-    transform: rotate(215deg) translateX(0);
-    opacity: 0;
-  }
-  8% { opacity: 1; }
-  100% {
-    transform: rotate(215deg)
-      translateX(calc(-1 * var(--meteor-travel, 700px)));
-    opacity: 0;
-  }
-}
 
-@utility animate-meteor {
-  animation-name: meteor;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
+
 @utility meteor {
   @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
+  width: var(--meteor-width, 200px);
+  height: var(--meteor-height, 2px);
+  top: var(--meteor-top, 80px);
+  left: var(--meteor-left, 900px);
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
   opacity: 0;
 }
+
 .meteor-gold {
-  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,215,0,1), rgba(255,255,255,0));
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 215, 0, 1),
+    rgba(255, 255, 255, 0)
+  );
   box-shadow: 0 0 14px 6px rgba(255, 215, 0, 0.35);
 }
+
 .mern-badge {
   position: absolute;
   font-weight: 700;
