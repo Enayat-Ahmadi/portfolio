@@ -5,6 +5,7 @@ import HeroSection from "@/Components/HeroSection";
 import AboutSection from "@/Components/AboutSection";
 import SkillsSection from "@/Components/SkillsSection";
 import Projects from "@/Components/Project";
+import ContactSection from "@/Components/Contact";
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden flex justify-center">
@@ -20,6 +21,7 @@ export default function Home() {
         <AboutSection />
         <SkillsSection />
         <Projects />
+        <ContactSection />
       </main>
     </div>
   );
