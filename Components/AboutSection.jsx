@@ -14,7 +14,7 @@ export default function AboutSection() {
               Junior Frontend Developer
             </h3>
             <p className="text-muted-foreground">
-              I am a Junior Frontend Developer with a Bachelor's degree in
+              I am a Junior Frontend Developer with a Bachelor&apos;s degree in
               Computer Science and currently enrolled in a Full-Stack Web
               Development Bootcamp.
             </p>
