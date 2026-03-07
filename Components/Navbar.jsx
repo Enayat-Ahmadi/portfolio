@@ -36,7 +36,7 @@ export default function Navbar() {
           href="#hero"
         >
           <span className="relative z-10">
-            <span className="text-glow text-foreground">Enayat</span>
+            <span className="text-glow text-foreground">Enayat </span>
             Portfolio
           </span>
         </Link>
