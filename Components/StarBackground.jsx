@@ -48,7 +48,7 @@ export default function StarsBackground() {
   }
 
   function generateMeteors() {
-    const numberOfMeteors = 5;
+    const numberOfMeteors = 3;
     const travel = Math.max(window.innerWidth, window.innerHeight) * 1.1;
 
     const newMeteors = Array.from({ length: numberOfMeteors }, (_, i) => {
