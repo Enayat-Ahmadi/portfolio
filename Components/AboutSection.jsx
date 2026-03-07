@@ -25,13 +25,13 @@ export default function AboutSection() {
               within agile teams. Driven by passion and the desire to create
               impactful applications.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center text-center">
               <Link href="#contact" className="cosmic-button">
                 Contact Me
               </Link>
               <Link
                 href=""
-                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
+                className="px-6 py-2 rounded-full border border-primary text-primary text-center hover:bg-primary/10 transition-colors duration-300"
               >
                 Download CV
               </Link>
