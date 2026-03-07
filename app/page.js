@@ -6,9 +6,11 @@ import AboutSection from "@/Components/AboutSection";
 import SkillsSection from "@/Components/SkillsSection";
 import Projects from "@/Components/Project";
 import ContactSection from "@/Components/Contact";
+import Footer from "@/Components/Footer";
+
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden flex justify-center">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Theme Toggle */}
       <ThemeToggle />
       {/* Background Effects */}
@@ -23,6 +25,7 @@ export default function Home() {
         <Projects />
         <ContactSection />
       </main>
+      <Footer />
     </div>
   );
 }
