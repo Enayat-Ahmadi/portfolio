@@ -14,16 +14,17 @@ export default function AboutSection() {
               Junior Frontend Developer
             </h3>
             <p className="text-muted-foreground">
-              I am a Junior Frontend Developer with a Bachelor&apos;s degree in
+              I am a Junior Frontend Developer with a Bachelor’s degree in
               Computer Science and currently enrolled in a Full-Stack Web
               Development Bootcamp.
             </p>
             <p className="text-muted-foreground">
-              I excel at building modern web applications using React and
-              Next.js, and I have a strong grasp of REST APIs. My focus is on
-              writing clean, maintainable code while actively collaborating
-              within agile teams. Driven by passion and the desire to create
-              impactful applications.
+              I focus on building modern web applications using React and
+              Next.js, and I have a solid understanding of REST APIs. I aim to
+              write clean, maintainable code and enjoy collaborating within
+              agile development teams. I’m passionate about learning new
+              technologies and creating applications that deliver real value to
+              users.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center text-center">
               <Link href="#contact" className="cosmic-button">
@@ -46,8 +47,9 @@ export default function AboutSection() {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Web Development</h4>
                   <p className="text-muted-foreground">
-                    Creating responsive website and web applications with modern
-                    frameworks
+                    Building responsive websites and web applications using
+                    React, Next.js, and JavaScript while focusing on clean and
+                    maintainable code.
                   </p>
                 </div>
               </div>
@@ -60,8 +62,9 @@ export default function AboutSection() {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">UI/UX Design</h4>
                   <p className="text-muted-foreground">
-                    Creating responsive website and web applications with modern
-                    frameworks
+                    Creating simple and user-friendly interfaces with responsive
+                    layouts to ensure a good user experience on different
+                    devices.
                   </p>
                 </div>
               </div>
@@ -74,8 +77,8 @@ export default function AboutSection() {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Project Management</h4>
                   <p className="text-muted-foreground">
-                    Creating responsive website and web applications with modern
-                    frameworks
+                    Organizing development tasks and working with agile
+                    workflows to manage projects and collaborate effectively.
                   </p>
                 </div>
               </div>
