@@ -21,9 +21,9 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-xl md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. In
-            corrupti at cupiditate unde fuga facere, quam dolores libero velit
-            quas?
+            I'm a Junior Web Developer building modern web apps with
+            React, Next.js, and JavaScript. Currently working on a Sneaker Shop
+            e-commerce project.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
