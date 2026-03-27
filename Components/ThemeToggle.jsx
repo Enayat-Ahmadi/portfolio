@@ -8,7 +8,7 @@ export const THEME_STATES = {
   LIGHT: "light",
 };
 
-export default function ThemeToggle() {
+export default function ThemeToggle({ className }) {
   const [isDarkMode, setIsDarkMode] = useState(false);
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
@@ -36,7 +36,7 @@ export default function ThemeToggle() {
     <button
       onClick={toggleTheme}
       className={cn(
-        "fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
+        className ?? "fixed top-5 right-5 z-50 hidden md:block p-2 rounded-full transition-colors duration-300",
       )}
     >
       {isDarkMode ? (

@@ -2,6 +2,7 @@
 import cn from "@/lib/utils";
 import { MenuIcon, X } from "lucide-react";
 import Link from "next/link";
+import ThemeToggle from "@/Components/ThemeToggle";
 import { useEffect, useState } from "react";
 const navItems = [
   { name: "Home", href: "/" },
@@ -69,7 +70,7 @@ export default function Navbar() {
               : "opacity-0 pointer-events-none",
           )}
         >
-          <div className="flex flex-col space-y-8 text-xl ">
+          <div className="flex flex-col space-y-8 text-xl">
             {navItems.map((item, key) => (
               <Link
                 onClick={() => setIsMenuOpen(false)}
@@ -80,6 +81,7 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
+            <ThemeToggle className="p-2 rounded-full transition-colors duration-300 self-center" />
           </div>
         </div>
       </div>
