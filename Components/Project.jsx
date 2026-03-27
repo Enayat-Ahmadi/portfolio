@@ -4,31 +4,33 @@ import Link from "next/link";
 const projects = [
   {
     id: 1,
-    title: "landing page",
-    description: "a beautiful landing page app using React and Tialwind.",
-    image: "/projects/coming-soon.webp",
-    tags: ["React", "TailwindCSS"],
-    demoUrl: "#",
-    githubUrl: "#",
+    title: "Sneakify – E-commerce App",
+    description:
+      "Full-stack e-commerce application with product listing, dynamic product pages, shopping cart, wishlist, and checkout flow. Includes admin panel for managing products and orders.",
+    image: "/projects/sneakify.png",
+    tags: ["Next.js", "React", "TailwindCSS", "MongoDB", "SWR"],
+    demoUrl: "https://sneakify-nu.vercel.app/",
+    githubUrl: "https://github.com/Enayat-Ahmadi/sneakify",
   },
   {
     id: 2,
-    title: "landing page",
+    title: "Money Manager App",
     description:
-      "a beautiful landing page app using React and styled Component.",
-    image: "/projects/coming-soon-2.webp",
-    tags: ["React", "TailwindCSS"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "Full-stack finance tracker with authentication, CRUD operations for transactions, and user-specific data. Features include search, balance calculation, and image upload with Cloudinary.",
+    image: "/projects/money-manager.png",
+    tags: ["Next.js", "React", "MongoDB", "NextAuth", "Styled-Components"],
+    demoUrl: "https://money-manager-liard-theta.vercel.app/login",
+    githubUrl: "https://github.com/Enayat-Ahmadi/money-manager",
   },
   {
     id: 3,
-    title: "landing page",
-    description: "a beautiful landing page app using React and Tialwind.",
-    image: "/projects/coming-soon-3.webp",
-    tags: ["React", "TailwindCSS", "Next.js"],
-    demoUrl: "#",
-    githubUrl: "#",
+    title: "Portfolio Website",
+    description:
+      "Personal portfolio built with Next.js App Router and Tailwind CSS. Includes dark mode, animations, and responsive modern UI to showcase projects and skills.",
+    image: "/projects/portfolio.png",
+    tags: ["Next.js", "TailwindCSS", "React"],
+    demoUrl: "https://portfolio-woad-nine-75.vercel.app/",
+    githubUrl: "https://github.com/Enayat-Ahmadi/portfolio",
   },
 ];
 
