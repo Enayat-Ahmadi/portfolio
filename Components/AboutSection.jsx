@@ -38,11 +38,11 @@ export default function AboutSection() {
               </Link>
             </div>
           </div>
-          <div className="geid geid-cols-1 gap-6">
+          <div className="grid grid-cols-1 gap-6">
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Code className="h-6 2-6 text-primary" />
+                  <Code className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Web Development</h4>

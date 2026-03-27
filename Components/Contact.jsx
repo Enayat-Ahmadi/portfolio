@@ -40,7 +40,7 @@ export default function ContactSection() {
                   <Link
                     href="mailto:eno.ahmadi22@gmail.com"
                     target="_blank"
-                    className="text-mutedt-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     eno.ahmadi22@gmail.com
                   </Link>
