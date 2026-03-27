@@ -98,7 +98,7 @@ export default function Projects() {
         </div>
         <div className="text-center mt-12">
           <Link
-            href="https://github.com/jaghori-dev"
+            href="https://github.com/Enayat-Ahmadi"
             target="_blank"
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
           >

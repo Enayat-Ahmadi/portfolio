@@ -84,10 +84,10 @@ export default function ContactSection() {
                 <Link href="https://linkedin.com" target="_blank">
                   <Linkedin />
                 </Link>
-                <Link href="https://instagram.com" target="_blank">
+                <Link href="https://instagram.com/eno.0093" target="_blank">
                   <Instagram />
                 </Link>
-                <Link href="https://x.com" target="_blank">
+                <Link href="" target="_blank">
                   <Twitter />
                 </Link>
               </div>
