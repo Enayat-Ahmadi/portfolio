@@ -23,9 +23,10 @@ export default function ContactSection() {
           Get In <span className="text-primary">Touch</span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam,
-          sapiente? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Illo, fuga.
+          I am currently open to new career opportunities as a Junior Frontend
+          Developer. Please feel free to contact me if my profile matches your
+          requirements. I would appreciate the opportunity to discuss a
+          potential collaboration.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8 ">
