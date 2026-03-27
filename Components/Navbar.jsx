@@ -16,7 +16,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.screenY > 10);
+      setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -26,8 +26,8 @@ export default function Navbar() {
       className={cn(
         "fixed w-full z-40 transition-all duration-300",
         isScrolled
-          ? "py-3 bg-background/80 backdrop-blur-md shadow-xs"
-          : "py-5",
+          ? "py-2 md:py-3 bg-background/80 backdrop-blur-md shadow-xs"
+          : "py-3 md:py-5",
       )}
     >
       <div className="container flex items-center justify-between">
@@ -46,7 +46,7 @@ export default function Navbar() {
             <Link
               key={key}
               href={item.href}
-              className="text-foreground/800 hover:text-primary transition-colors duration-300"
+              className="text-foreground/80 hover:text-primary transition-colors duration-300"
             >
               {item.name}
             </Link>
@@ -75,7 +75,7 @@ export default function Navbar() {
                 onClick={() => setIsMenuOpen(false)}
                 key={key}
                 href={item.href}
-                className="text-foreground/800 hover:text-primary transition-colors duration-300"
+                className="text-foreground/80 hover:text-primary transition-colors duration-300"
               >
                 {item.name}
               </Link>

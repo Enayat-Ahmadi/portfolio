@@ -135,7 +135,7 @@ export default function ContactSection() {
                   Your Message
                 </label>
                 <textarea
-                  name="messaage"
+                  name="message"
                   id="message"
                   required
                   placeholder="your Message..."
