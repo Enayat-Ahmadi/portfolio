@@ -36,7 +36,7 @@ export default function ThemeToggle({ className }) {
     <button
       onClick={toggleTheme}
       className={cn(
-        className ?? "fixed top-5 right-5 z-50 hidden md:block p-2 rounded-full transition-colors duration-300",
+        className ?? "rounded-full transition-colors duration-300",
       )}
     >
       {isDarkMode ? (
