@@ -9,10 +9,11 @@ import ContactSection from "@/Components/Contact";
 import Footer from "@/Components/Footer";
 
 export default function Home() {
+  
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Theme Toggle */}
-      
+
       {/* Background Effects */}
       <StarsBackground />
       {/* Navagation */}

@@ -12,8 +12,29 @@ import Link from "next/link";
 import cn from "@/lib/utils";
 
 export default function ContactSection() {
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
+    const formData = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      message: e.target.message.value,
+    };
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json();
+      if (data.success) {
+        alert("Message sent successfully");
+        e.target.reset();
+      } else {
+        alert(data.error || "Something went wrong");
+      }
+    } catch (error) {
+      alert("Somthing went wrong");
+    }
   }
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30 ">
